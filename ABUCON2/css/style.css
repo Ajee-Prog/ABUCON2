@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.header{
+    padding: 60px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+}
+.navbar{
+    display: flex;
+    background-color: #333;
+}
+.navbar a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*side left colum*/
+.side{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+/*main column*/
+.main{
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+/*new Styling*/
+.main .abucon_img1{
+    margin: auto;
+    height: 700px;
+    background-color: skyblue;
+    box-sizing: border-box;
+}
+.abucon_img{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+.content{
+    margin: 0 auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding: 5px;
+}
+.content_carousel{
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
+.content_carousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.content_carousel figure{
+    width: 100%;
+    height: 120px;
+    border: 1px solid #4d444d;
+    overflow: hidden;
+    position: absolute;
+}
+.content_carousel figure:nth-child(1){
+    transform: rotateY(0deg) translateZ(150px);
+}
+.content_carousel figure:nth-child(2){
+    transform: rotateY(40deg) translateZ(350px);
+}
+.content_carousel figure:nth-child(3){
+    transform: rotateY(80deg) translateZ(150px);
+}
+.content_carousel figure:nth-child(4){
+    transform: rotateY(120deg) translateZ(350px);
+}
+.content_carousel figure:nth-child(5){
+    transform: rotateY(160deg) translateZ(150px);
+}
+.content_carousel figure:nth-child(6){
+    transform: rotateY(200deg) translateZ(350px);
+}
+.content_carousel figure:nth-child(7){
+    transform: rotateY(240deg) translateZ(150px);
+}
+.content_carousel figure:nth-child(8){
+    transform: rotateY(280deg) translateZ(150px);
+}
+.content_carousel figure:nth-child(9){
+    transform: rotateY(320deg) translateZ(350px);
+}
+.shadow{
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 2px;
+}
+.content_carousel img{
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+
+}
+.content_carousel img:hover{
+    transform: scale(1,2);
+    transition: all 300ms;
+}
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    } 
+    to{
+        transform: rotateY(360deg);
+    }
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(58, 16, 16);
+}
